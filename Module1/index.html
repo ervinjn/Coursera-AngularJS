@@ -1,0 +1,38 @@
+<!doctype html>
+
+<!DOCTYPE html>
+<html ng-app="LunchCheck">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Angular JS - Module 1 </title>
+
+	<link rel="stylesheet" href="CSS/bootstrap.min.css">
+   	<link rel="stylesheet" type="text/css" href="CSS/styles.css">
+
+	<script type="text/javascript" src="JS/angular.min.js" ></script>
+	<script type="text/javascript" src="JS/app.js"></script>
+</head> 
+<body class="panel panel-default">
+
+	<h1> Jason makes <i>YOUR</i> lunch <i>HIS</i> business   </h1>
+
+	<div class= "panel-body" ng-controller = "LunchCheckController">
+		List the items you plan for lunch (separated by commas):
+		<input type="text" ng-model="items" style="border: 3px solid {{buttoncolor}}">
+		<button type="button" ng-click = "displaymessage();" style="color: {{buttoncolor}}"> Click to hear my opinion. </button>
+		<p style = "color: {{messagecolor}}">  {{message}}  </p> 
+	</div>
+
+
+	<div classs="panel-footer"> Implemented with Angular JS </div>
+
+
+	<!-- For the colors, I had to use in-line styling.  I tried to use interpolation
+	to set classes for the input box, the button and paragraph.  But I never got it to work.  
+	Not sure why.
+
+	   -->
+
+</body>
+</html>

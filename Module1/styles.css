@@ -1,0 +1,40 @@
+
+* {
+	font-size: 110%;
+}
+
+
+.messagecolor1 {
+	color: #000000;    /*** black ***/
+}
+
+
+
+.messagecolor2 {
+	color: #095B0C;  /*** dark green ***/
+}
+
+
+.messagecolor3 {
+	color: #A70E0E;	 /*** red ***/
+}
+
+.buttoncolor1 {
+	color: #000000;
+	border: 3px solid black;
+
+}
+
+
+.buttoncolor2 {
+	color: #095B0C;
+	border: 3px solid #095B0C;
+
+}
+
+.buttoncolor3 {
+	color: #A70E0E;
+	border: 3px solid #A70E0E;
+
+}
+
