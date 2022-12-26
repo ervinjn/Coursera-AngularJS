@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html ng-app="ShoppingListCheckoff">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> Angular JS - Module 2 </title>
+
+		<link rel="stylesheet" href="CSS/bootstrap.min.css">
+   		<link rel="stylesheet" type="text/css" href="CSS/styles.css">
+
+		<script type="text/javascript" src="JS/angular.min.js" ></script>
+		<script type="text/javascript" src="JS/app.js"></script>
+	</head> 
+
+
+	<body>
+		<div class="container"> 
+		<div class="row">
+			<h2 class="col-12"> Shopping List </h2>
+
+		</div>	
+		<div class="row">
+		<div ng-controller = "BuyController as buyctrl" class="col">
+			<h3> To Buy </h3>
+			<ul>
+				<li ng-repeat="item in buyctrl.buylist"> {{item.quantity}} {{item.name}}  
+					<button type="button" ng-click = "buyctrl.move($index);"> Buy It! </button>
+				</li>
+			</ul>
+			<div ng-if = "buyctrl.buylist==0">
+				Everything is Bought!
+			</div>
+		</div>
+	
+		<div ng-controller = "BoughtController as boughtctrl" class="col">
+			<h3> Bought </h3>
+			<ul>
+				<li ng-repeat="item in boughtctrl.boughtlist"> {{item.quantity}} of {{item.name}}  </li>
+			</ul>
+			<div ng-if = "boughtctrl.boughtlist==0">
+				Nothing is Bought Yet
+			</div>
+		</div>
+		</div> <!-- end of row div  -->
+		</div> <!-- end of container div  -->
+	</body>
+</html>
