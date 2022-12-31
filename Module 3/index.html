@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html ng-app="NarrowItDownApp">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> Angular JS - Module 3 </title>
+
+		<link rel="stylesheet" href="CSS/bootstrap.min.css">
+   		<link rel="stylesheet" type="text/css" href="CSS/styles.css">
+
+		<script type="text/javascript" src="JS/angular.min.js" ></script>
+		<script type="text/javascript" src="JS/app.js"></script>
+	</head> 
+
+
+	<body>
+			<h3> Welcome to the Great Wall of Deliciousness!  Chinese Cuisine </h3>
+
+		<div ng-controller = "NarrowItDownController as ndctrl">
+			<h4>  Menu Search </h4>
+			 <input type="text" ng-model="ndctrl.searchTerm" placeholder="Enter Search String">
+			 <button ng-click="ndctrl.getmatchingitems(ndctrl.searchTerm);">Narrow It Down For Me!</button>
+			 <found-items items="ndctrl.foundItems" remove="ndctrl.removeItem(index)">  </found-items>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,8 @@
+<ul>
+	<li ng-repeat="item in items">     
+		{{item.short_name}},{{item.name}},{{item.description}}
+		<button ng-click="ndctrl.remove({index: $index})">  Remove Item  </button>
+	</li>
+</ul>
+
+<div ng-if="!items" class="???"> I know you're hungry, but geez.  You don't want the whole menu!  Enter a search term to narrow it down.  </div>
