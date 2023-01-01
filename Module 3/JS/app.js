@@ -76,7 +76,7 @@ function MenuSearchService($q,$http) {
 
 function foundItemsDirective() {					/* scope of directive is scope of containing controller   */
 	var ddo = {
-		templateUrl: 'foundItems.html',
+//		templateUrl: 'foundItems.html',
 		scope: {
 				items: '<',
 				onRemove: '&'
