@@ -1,8 +1,13 @@
 <ul>
-	<li ng-repeat="item in items">     
-		{{item.short_name}},{{item.name}},{{item.description}}
-		<button ng-click="ndctrl.remove({index: $index})">  Remove Item  </button>
+	<li ng-repeat="item in ndctrl.foundItems">     
+		{{item.name}},{{item.short_name}},{{item.description}}
+		<button ng-click="ndctrl.removeItem({index: $index});">  Don't want this one!  </button>
 	</li>
 </ul>
 
-<div ng-if="!items" class="???"> I know you're hungry, but geez.  You don't want the whole menu!  Enter a search term to narrow it down.  </div>
+<div ng-if="ndctrl.emptysearch" class="???"> You didn't enter a search term. </div>
+
+<div ng-if="ndctrl.removedsomething && ndctrl.foundItems==0" class="???"> Picky, Picky!  Try something else.  </div>
+
+<div ng-if="ndctrl.searched && ndctrl.foundItems==0" class="???"> Sorry, we couldn't find a match.  </div>
+			 
