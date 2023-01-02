@@ -27,6 +27,12 @@
 			 <found-items-directive
 			 items="ndctrl.foundItems" 
 			 on-remove="ndctrl.removeItem(index)">  
+				 <h4 ng-if="ndctrl.emptysearch" class="???"> You didn't enter a search term. </h4>
+
+				<h4 ng-if="ndctrl.removedsomething && ndctrl.foundItems==0" class="???"> Picky, Picky!  Try something else.  </h4>
+
+			<h4 ng-if="ndctrl.searched && ndctrl.foundItems==0" class="???"> Sorry, we couldn't find a match.  </h4>
+				 
 			 	<ul>
 					<li ng-repeat="item in ndctrl.foundItems">     
 					{{item.name}},{{item.short_name}},{{item.description}}
@@ -34,11 +40,7 @@
 					</li>
 				</ul>
 
-			<div ng-if="ndctrl.emptysearch" class="???"> You didn't enter a search term. </div>
-
-			<div ng-if="ndctrl.removedsomething && ndctrl.foundItems==0" class="???"> Picky, Picky!  Try something else.  </div>
-
-			<div ng-if="ndctrl.searched && ndctrl.foundItems==0" class="???"> Sorry, we couldn't find a match.  </div>
+			
 
 
 
