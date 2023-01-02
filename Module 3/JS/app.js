@@ -49,8 +49,8 @@ function MenuSearchService($q,$http) {
   	var Menu = [];    /* initialize array to be passed back to caller   */
   	var response = $http({
   		method: "GET",
-  //		url: "data/menu.json"
-  		url: "https://coursera-jhu-default-rtdb.firebaseio.com/menu_items.json"  
+		url: "data/menu.json"
+  	//	url: "https://coursera-jhu-default-rtdb.firebaseio.com/menu_items.json"  
   		}).then( function(response) {
   			for(let prop in response.data) {
   				var MenuItemArray = response.data[prop].menu_items
