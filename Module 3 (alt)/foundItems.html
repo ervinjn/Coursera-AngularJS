@@ -3,7 +3,7 @@
 <h4 ng-if="ndctrl.searched && ndctrl.foundItems==0" class="???"> Sorry, we couldn't find a match.  </h4>
 				 
 <ul>
-	<li ng-repeat="item in ndctrl.foundItems">     
+	<li ng-repeat="item in items">     
 		{{item.name}},{{item.short_name}},{{item.description}}
 		<button ng-click="ndctrl.removeItem({index: $index});">  Don't want this one!  </button>
 	</li>
