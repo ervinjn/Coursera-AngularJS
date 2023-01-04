@@ -82,7 +82,7 @@ function foundItemsDirective() {					/* scope of directive is scope of containin
 				onRemove: '&'
 		}
 	}
-
+	console.log(ddo);
 	return ddo;
 
 }
