@@ -1,1 +1,44 @@
+<!DOCTYPE html>
 
+<html ng-app="NarrowItDownApp">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> Angular JS - Module 3 </title>
+
+		<link rel="stylesheet" href="CSS/bootstrap.min.css">
+   		<link rel="stylesheet" type="text/css" href="CSS/styles.css">
+
+		<script type="text/javascript" src="JS/angular.min.js" ></script>
+		<script type="text/javascript" src="JS/app.js"></script>
+	</head> 
+
+
+	<body>
+			<h2> Welcome to the <b>Great Wall of Deliciousness!</b>  <br> 
+			       <b>World Captial</b> of  Chinese Cuisine </h2>
+
+		<div ng-controller = "NarrowItDownController as ndctrl">
+			<h4>  CAUTION!  Our menu is so rich and glorious that  it can overwhelm.  <br>
+			Narrow down your search by typing what you're thinking of in the box below. </h4>
+			 <input type="text" ng-model="ndctrl.searchTerm" placeholder="Enter Search String">
+			 <button ng-click="ndctrl.getmatchingitems(ndctrl.searchTerm);">Narrow It Down For Me!</button>
+			 <found-items-directive
+			 items="ndctrl.foundItems" 
+			 on-remove="ndctrl.removeItem(index)">  
+				<h4 ng-if="ndctrl.emptysearch" class="???"> You didn't enter a search term. </h4>
+				<h4 ng-if="ndctrl.removedsomething && ndctrl.foundItems==0" class="???"> Picky, Picky!  Try something else.  </h4>
+			  <h4 ng-if="ndctrl.searched && ndctrl.foundItems==0" class="???"> Sorry, we couldn't find a match.  </h4>
+				 
+			 	<ul>
+					<li ng-repeat="item in ndctrl.foundItems">     
+					{{item.name}},{{item.short_name}},{{item.description}}
+					<button ng-click="ndctrl.removeItem({index: $index});">  Don't want this one!  </button>
+					</li>
+				</ul>
+			 </found-items-directive>
+		</div>
+    
+	</body>
+</html>
