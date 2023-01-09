@@ -27,7 +27,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
 // State configuration for the Categories List
   .state('CategoryList', {
     url: '/Category-List',
-    templateUrl: 'src/templates/categorylist.template.html',
+    templateUrl: 'src/templates/categorieslist.template.html',
     controller: 'CategoriesListController as CLctrl',
     resolve: {
       items: ['MenuDataService', function (MenuDataService) {
