@@ -30,13 +30,5 @@ service.getItemsforCategory = function (categoryShortName) {
         return(response)
     }
 
-
-
-
 	}
-
-}
-
-
-
 })();
