@@ -31,7 +31,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     controller: 'CategoriesListController as CLctrl',
     resolve: {
       items: ['MenuDataService', function (MenuDataService) {
-        return MenuDataService.getAllCategories();
+        return MenuDataService.getAllCategories()
       }]
     }
   })
@@ -41,29 +41,15 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   .state('Items', {
     url: '/Category-List/{shortName}',
     templateUrl: 'src/templates/itemslist.template.html',
-    controller: 'ItemsListController as itemctrl',
+    controller: 'ItemsListController as itemsctrl',
     resolve: {
-      items: ['$stateParams','MenuDataService', function ($stateParams, MenuDataService) {
-        return MenuDataService.getItemsforCategory($stateParams.shortName).then( function () {
-
-
-          
-        }
-
-
-          )
-
-
-
-         }]
-    }
+      data: ['$stateParams','MenuDataService', function ($stateParams, MenuDataService) {
+        return MenuDataService.getItemsforCategory($stateParams.shortName).then( function (response) {
+            return response.data })    }]
+      }
   })
 
-
-
-
-
-}
+}  // ends the route configuration functon (see line 12)
 
 
 
