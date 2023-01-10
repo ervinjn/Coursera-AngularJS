@@ -6,9 +6,9 @@ angular.module('data')
 
 
 ItemsListController.$inject = ['listdata'];
-function ItemsListController(data) {
+function ItemsListController(listdata) {
   var itemsctrl = this;
-  itemsctrl.data = data;
+  itemsctrl.data = listdata;
 }
 
 })();
