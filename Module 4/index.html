@@ -16,21 +16,30 @@
  		<ui-view></ui-view>
 
 		<!-- Libraries -->
-    	<script src="lib/angular.min.js"></script>
-    	<script src="lib/angular-ui-router.min.js"></script>
+    		<script src="lib/angular.min.js"></script>
+    		<script src="lib/angular-ui-router.min.js"></script>
 
-    	<!-- Modules -->
-    	<script src="src/menuapp.module.js"></script>
-    	<script src="src/data.module.js"></script>
+    		<!-- Modules -->
+    		<script src="src/menuapp.module.js"></script>
+    		<script src="src/data.module.js"></script>
 
-    	<!-- Routes -->
-    	<script src="src/routes.js"></script>
-
-   		 <!-- 'ShoppingList' module artifacts -->
+    		<!-- Routes -->
+    		<script src="src/routes.js"></script>
+		
+		<!-- Components, Controllers and Services -->	
    		<script src="src/categories.component.js"></script>
-    	<script src="src/items.component.js"></script>
-    	<script src="src/menudata.service.js"></script>
-    	
+    		<script src="src/items.component.js"></script>
+		<script src="src/categorieslist.controller.js"></script>
+		<script src="src/itemslist.controller.js"></script>
+    		<script src="src/menudata.service.js"></script>
+		
+		<!-- Templates -->
+		<script src="src/templates/categorieslist.template.html"></script>
+    		<script src="src/templates/categorylist.component.template.html"></script>
+		<script src="src/templates/home.template.html"></script>
+		<script src="src/templates/itemslist.component.template.html"></script>
+		<script src="src/templates/itemslist.template.html"></script>	
+		
 	</body>
 
 </html>
