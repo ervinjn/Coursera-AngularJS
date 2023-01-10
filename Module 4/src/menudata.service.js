@@ -11,6 +11,7 @@ function MenuDataService($q,$http) {
 
 
     service.getAllCategories = function () {
+	    console.log("getAllCategories function called")
         var response = $http({
             method: "GET",
      //     url: "data/menu.json"
