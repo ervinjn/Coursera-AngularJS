@@ -38,7 +38,6 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   })
 
   // State configuration for the detailed items list
- // State configuration for the Categories List
   .state('Items', {
     url: '/Category-List/{shortName}',
     templateUrl: 'src/templates/itemslist.template.html',
