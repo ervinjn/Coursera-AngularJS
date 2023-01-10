@@ -18,6 +18,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   $stateProvider
 
 // State configuration for the Home page
+  console.log("arriving at home state")
   .state('home', {
     url: '/',
     templateUrl: 'src/templates/home.template.html'
