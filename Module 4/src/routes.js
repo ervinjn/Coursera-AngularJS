@@ -26,6 +26,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
 
 
 // State configuration for the Categories List
+  console.log("arriving at main list state")
   .state('CategoryList', {
     url: '/Category-List',
     templateUrl: 'src/templates/categorieslist.template.html',
@@ -38,6 +39,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   })
 
   // State configuration for the detailed items list
+   console.log("arriving at detailed list state")
   .state('Items', {
     url: '/Category-List/{shortName}',
     templateUrl: 'src/templates/itemslist.template.html',
