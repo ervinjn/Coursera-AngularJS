@@ -43,7 +43,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     templateUrl: 'src/templates/itemslist.template.html',
     controller: 'ItemsListController as itemsctrl',
     resolve: {
-      data: ['$stateParams','MenuDataService', function ($stateParams, MenuDataService) {
+      listdata: ['$stateParams','MenuDataService', function ($stateParams, MenuDataService) {
         return MenuDataService.getItemsforCategory($stateParams.shortName).then( function (response) {
             return response.data })    }]
       }
