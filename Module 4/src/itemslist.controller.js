@@ -9,6 +9,6 @@ ItemsListController.$inject = ['data'];
 function ItemsListController(data) {
   var itemsctrl = this;
   itemsctrl.data = data;
-
-
 }
+
+})();
