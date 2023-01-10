@@ -14,8 +14,8 @@ function MenuDataService($q,$http) {
 	    console.log("getAllCategories function called")
         var response = $http({
             method: "GET",
-     	    url: "data/categories.json"
-       //     url: "https://coursera-jhu-default-rtdb.firebaseio.com/categories.json"  
+     //	    url: "data/categories.json"
+            url: "https://coursera-jhu-default-rtdb.firebaseio.com/categories.json"  
             })
             return response;
     }
