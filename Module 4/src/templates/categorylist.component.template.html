@@ -1,7 +1,8 @@
 Just seeing if the component template is being loaded at all
 <ul>
   <li> is the ul tag working?  </li>
-  <li ng-repeat="item in CLctrl.items">
-    <a ui-sref="Items({items: item.short_name})" class="link"> $index {{ CLctrl.items[$index] }} </a>    
+  <li ng-repeat="part in CLctrl.items">
+    {{ part }}
+    <a ui-sref="Items({items: item.short_name})" class="link">  {{ part }} </a>    
   </li>
 </ul>
