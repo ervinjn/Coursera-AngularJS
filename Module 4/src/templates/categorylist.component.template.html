@@ -1,5 +1,5 @@
 <ul>
-  <li ng-repeat="item in catarray">
+  <li ng-repeat="item in CLctrl.items">
     <a ui-sref="Items({items: item[$index].short_name})" class="link"> {{ item.name }} </a>    
   </li>
 </ul>
