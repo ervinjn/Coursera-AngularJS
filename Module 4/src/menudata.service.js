@@ -10,7 +10,7 @@ function MenuDataService($q,$http) {
   var service = this;
 
 
-    service.getAllCategories = function ()
+    service.getAllCategories = function () {
         var response = $http({
             method: "GET",
      	    url: "data/categories.json"
