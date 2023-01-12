@@ -1,6 +1,5 @@
 <ul>
-  <li ng-repeat="part in $ctrl.catarray"
-      ui-sref="Items({shortName: part.short_name})">
-      {{ part.name }} 
+  <li ng-repeat="part in $ctrl.catarray">
+    <a  ui-sref="Items({shortName: part.short_name})">   {{ part.name }} </a>
   </li>
 </ul>
