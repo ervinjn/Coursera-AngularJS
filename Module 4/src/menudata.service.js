@@ -22,7 +22,7 @@ function MenuDataService($q,$http) {
 
 service.getItemsforCategory = function (categoryShortName) {
 	console.log("Entered get items function")
-	console.log(string.concat("data/",categoryShortName,".json"))
+	console.log("data/" + categoryShortName + ".json")
         var response = $http({
             method: "GET",
      	   url: string.concat("data/",categoryShortName,".json")
