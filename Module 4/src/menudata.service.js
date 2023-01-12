@@ -25,9 +25,9 @@ service.getItemsforCategory = function (categoryShortName) {
         var response = $http({
             method: "GET",
      	   url: string.concat("data/",categoryShortName,".json")
-		console.log(url)
       	//     url: "https://coursera-jhu-default-rtdb.firebaseio.com/menu_items/%7BcategoryShortName%7D.json"  
             })
+	    console.log(response)
         return(response)
     }
 
