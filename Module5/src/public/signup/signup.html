@@ -35,7 +35,7 @@
 
 	<input type="text" 
 		name="favdish" 
-		placeholder="favorite dish (code)"
+		placeholder="favorite menu item (letter code)"
 		ng-model="formctrl.user.favdish"
 		required>
 		<span ng-if="signup.firstname.touched && signup.firstname.required"> &#x2713; </span>
@@ -60,12 +60,3 @@
 </form>
 
 
-
-<!--  Put a table here showing all of the name-short name combinations  -->
-
-
-
-
-	<div ng-repeat="formctrl.menuCategories">
-		{{  formctrl.menuCategories[$index]  }}
-	</div>
