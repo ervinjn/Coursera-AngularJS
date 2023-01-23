@@ -2,7 +2,7 @@
 "use strict";
 
 angular.module('common', [])
-.constant('ApiPath', 'https://coursera-jhu-default-rtdb.firebaseio.com')
+.constant('ApiPath', 'https://github.com/ervinjn/Coursera-AngularJS/tree/main/Module5/')
 .config(config);
 
 config.$inject = ['$httpProvider'];
