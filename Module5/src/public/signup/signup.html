@@ -1,0 +1,71 @@
+
+<h2> Sign Up </h2>
+
+<h3> To sign up, complete the form and submit. </h3>
+
+
+<form name="signup" novalidate>
+	<input type="text" 
+		name="firstname" 
+		placeholder="first name" 
+		ng-model="formctrl.user.firstname"
+		required>
+		<span ng-if="signup.firstname.touched && signup.firstname.required"> &#x2713; </span>
+
+	<input type="text" 
+		name="lastname" 
+		placeholder="last name" 
+		ng-model="formctrl.user.lastname" 
+		required>
+		<span ng-if="signup.firstname.touched && signup.firstname.required"> &#x2713; </span>
+
+	<input type="text" 
+		name="email" 
+		placeholder="email address"
+		ng-model="formctrl.user.email" 
+		required>
+		<span ng-if="signup.firstname.touched && signup.firstname.required"> &#x2713; </span>
+
+	<input type="text" 
+		name="phone" 
+		placeholder="phone number"
+		ng-model="formctrl.user.phone"
+		required>
+		<span ng-if="signup.firstname.touched && signup.firstname.required"> &#x2713; </span>
+
+	<input type="text" 
+		name="favdish" 
+		placeholder="favorite dish (code)"
+		ng-model="formctrl.user.favdish"
+		required>
+		<span ng-if="signup.firstname.touched && signup.firstname.required"> &#x2713; </span>
+
+	<button ng-disabled="signup.$invalid" ng-click = "formctrl.store(ctrl.user)">Submit</button>
+
+
+	<span ng-if = "(signup.firstname.$error.touched && signup.lastname.$error.touched && 
+				signup.email.$error.touched && signup.phone.$error.touched && 
+				signup.favdish.$error.touched ) &&  (
+				signup.firstname.$error.required || signup.lastname.$error.required || 
+				signup.email.$error.required || signup.phone.$error.required || 
+				signup.favdish.$error.required )" >
+					All fields are required.  Make sure to complete the entire form to register!
+				</span>
+
+
+	<span ng-if="ctrl.stored">
+		Your information has been saved!
+	</span>
+
+</form>
+
+
+
+<!--  Put a table here showing all of the name-short name combinations  -->
+
+
+
+
+	<div ng-repeat="formctrl.menuCategories">
+		{{  formctrl.menuCategories[$index]  }}
+	</div>
