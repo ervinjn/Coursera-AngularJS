@@ -10,7 +10,11 @@ function MenuService($http, ApiPath) {
   var service = this;
 
   service.getCategories = function () {
-   return $http.get(ApiPath + 'data/categories.json').then(function (response) {
+ //  return $http.get(ApiPath + 'data/categories.json').then(function (response) {
+ //    return response.data;
+ //   });
+
+    return $http.get('data/categories.json').then(function (response) {
      return response.data;
     });
 
@@ -19,7 +23,11 @@ function MenuService($http, ApiPath) {
 
 
   service.getMenuItems = function (category) {
-    return $http.get(ApiPath + 'data/' + category + '.json').then(function (response) {
+  //  return $http.get(ApiPath + 'data/' + category + '.json').then(function (response) {
+  //    return response.data;
+  // });
+
+     return $http.get('data/' + category + '.json').then(function (response) {
       return response.data;
    });
 
