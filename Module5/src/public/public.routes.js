@@ -46,6 +46,8 @@ function routeConfig ($stateProvider) {
       templateUrl: 'src/public/signup/signup.html',
       controller: 'FormController',
       controllerAs: 'formctrl'
+      resolve: {
+        test: [ function () { return true; }]}
     });
 
 }
