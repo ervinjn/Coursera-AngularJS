@@ -14,7 +14,7 @@ function FormController(UserService) {
     phone: "",
     favdish: ""
   };
-  
+  console.log('initial user data: '+ ctrl.user)
 
   ctrl.stored = false
   function ctrl.store(data) { 
