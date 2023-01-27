@@ -10,7 +10,7 @@ angular.module('public')
 function UserService() {
   var service = this;
 
-  var service.data = {};
+  service.data = {};
 
   service.store = function (userdata) { 
     service.data = userdata
