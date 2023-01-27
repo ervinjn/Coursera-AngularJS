@@ -13,7 +13,7 @@ function UserService() {
   var service.data = {};
 
   service.store = function (userdata) { 
-    data = userdata
+    service.data = userdata
     return(true)
   };
   // The store method expects an object containing user data.  
