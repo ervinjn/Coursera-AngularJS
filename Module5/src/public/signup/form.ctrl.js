@@ -16,16 +16,15 @@ function FormController(UserService) {
   };
   console.log('initial user data: '+ ctrl.user)
 
-  ctrl.stored = false
-  function ctrl.store(data) { 
-    ctrl.stored = UserService.store(data) 
-    return ctrl.stored
-  }
+  // ctrl.stored = false
+ //  function ctrl.store(data) { 
+  //  ctrl.stored = UserService.store(data) 
+ //   return ctrl.stored
+  // }
 
 
 
 }
-
 
 
 })();
