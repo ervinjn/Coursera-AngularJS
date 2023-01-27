@@ -13,9 +13,7 @@ function MenuService($http, ApiPath) {
  //  return $http.get(ApiPath + 'data/categories.json').then(function (response) {
  //    return response.data;
  //   });
-    console.log('getCategories called')
     return $http.get('data/categories.json').then(function (response) {
-      console.log('response returned')
      return response.data;
     });
 
