@@ -4,7 +4,7 @@
 angular.module('public')
 .controller('FormController', FormController);
 
-UserController.$inject = ['UserService'];
+FormController.$inject = ['UserService'];
 function FormController(UserService) {
   var ctrl = this;
   ctrl.user = {
