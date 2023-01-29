@@ -187,8 +187,14 @@ h3.menu-item-title {
 
 /***************** Form Validation Styling  ******************/
 
+
+.form{
+  color: black;
+}
+
+
 .ng-touched.ng-valid {
-  border: 2px green solid;
+  border: 5px green solid;
 }
 
 

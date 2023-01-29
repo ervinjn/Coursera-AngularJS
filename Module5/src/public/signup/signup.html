@@ -1,44 +1,46 @@
 
+
+
 <h2> Sign Up </h2>
 
 <h3> To sign up, complete the form and submit. </h3>
 {{formCtrl.user}}
 
-<form name="signup" novalidate>
+<form name="signup" novalidate class="form">
 	<input type="text" 
 		name="firstname" 
 		placeholder="first name" 
 		ng-model="formctrl.user.firstname"
 		required>
-		<span ng-if="signup.firstname.touched && signup.firstname.required"> &#x2713; </span>
+		<span ng-if="signup.firstname.touched && signup.firstname.$valid"> &#x2713; </span>
 
 	<input type="text" 
 		name="lastname" 
 		placeholder="last name" 
 		ng-model="formctrl.user.lastname" 
 		required>
-		<span ng-if="signup.firstname.touched && signup.firstname.required"> &#x2713; </span>
+		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
 
 	<input type="text" 
 		name="email" 
 		placeholder="email address"
 		ng-model="formctrl.user.email" 
 		required>
-		<span ng-if="signup.firstname.touched && signup.firstname.required"> &#x2713; </span>
+		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
 
 	<input type="text" 
 		name="phone" 
 		placeholder="phone number"
 		ng-model="formctrl.user.phone"
 		required>
-		<span ng-if="signup.firstname.touched && signup.firstname.required"> &#x2713; </span>
+		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
 
 	<input type="text" 
 		name="favdish" 
 		placeholder="favorite menu item (letter code)"
 		ng-model="formctrl.user.favdishcode"
 		required>
-		<span ng-if="signup.firstname.touched && signup.firstname.required"> &#x2713; </span>
+		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
 		<span ng-if="formctrl.invalidcode"> 
 			"Oops! Despite the vast cornucopia that is our menu, you have managed to pick a
 			code that doesn't exist.  As we get closer to our goal of complete domination
