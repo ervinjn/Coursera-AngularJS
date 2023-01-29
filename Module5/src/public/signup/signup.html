@@ -11,7 +11,7 @@
 		name="firstname" 
 		placeholder="first name" 
 		ng-model="formctrl.user.firstname"
-		required>
+		required class='inputbox'>
 		<span ng-if="signup.firstname.touched && signup.firstname.$valid"> &#x2713; </span>
 
 		<br>
@@ -20,7 +20,7 @@
 		name="lastname" 
 		placeholder="last name" 
 		ng-model="formctrl.user.lastname" 
-		required>
+		required class='inputbox'>
 		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
 
 		<br>
@@ -29,7 +29,7 @@
 		name="email" 
 		placeholder="email address"
 		ng-model="formctrl.user.email" 
-		required>
+		required class='inputbox'>
 		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
 
 		<br>
@@ -38,7 +38,7 @@
 		name="phone" 
 		placeholder="phone number"
 		ng-model="formctrl.user.phone"
-		required>
+		required class='inputbox'>
 		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
 
 		<br>
@@ -47,7 +47,7 @@
 		name="favdish" 
 		placeholder="favorite menu item (code)"
 		ng-model="formctrl.user.favdishcode"
-		required>
+		required class='inputbox'>
 		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
 		<span ng-if="formctrl.invalidcode"> 
 			"Oops! Despite the vast cornucopia that is our menu, you have managed to pick a
@@ -59,7 +59,7 @@
 
 		<br>
 
-	<button ng-disabled="signup.$invalid" ng-click = "formctrl.store(ctrl.user)">Submit</button>
+	<button ng-disabled="signup.$invalid" ng-click = "formctrl.store(formctrl.user)">Submit</button>
 
 
 	<span ng-if = "(signup.firstname.$error.touched && signup.lastname.$error.touched && 

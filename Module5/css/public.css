@@ -192,6 +192,11 @@ h3.menu-item-title {
   color: black;
 }
 
+.inputbox {
+  margin: 5px;
+
+
+}
 
 .ng-touched.ng-valid {
   border: 5px green solid;
