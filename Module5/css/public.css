@@ -189,11 +189,12 @@ h3.menu-item-title {
 
 
 #userform{
-  color: black;
+  color: white;
 }
 
 .inputbox {
   margin: 5px;
+  background-color: #179052;
 
 
 }
