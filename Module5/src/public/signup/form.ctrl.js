@@ -26,7 +26,7 @@ function FormController(UserService,MenuService) {
   }
 
  ctrl.stored = false
-  function ctrl.store(data) { 
+  ctrl.store = function(data) { 
 
     // first task, before storage, is to check whether they have entered a valid favdish code
     if (ctrl.codes.indexOf(ctrl.user.favdishcode) == -1){
