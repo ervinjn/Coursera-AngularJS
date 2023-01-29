@@ -21,7 +21,7 @@ function FormController(UserService,MenuService) {
   // Build an array of valid favdish codes
   ctrl.codes = [];
   ctrl.categories = MenuService.getCategories();
-  for(let i=0, ctrl.categories.length, i++) {
+  for(let i=0; ctrl.categories.length; i++) {
     ctrl.codes.push(ctrl.categories[i].short_name)
   }
 
