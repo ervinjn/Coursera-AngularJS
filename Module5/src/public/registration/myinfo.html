@@ -1,0 +1,20 @@
+
+
+<div ng-if="infoctrl.registered">  
+	<h2>  Registered Information for {{infoctrl.userdata.firstname}}! </h2>
+	First Name: {{infoctrl.userdata.firstname}} <br>
+	Last Name: {{infoctrl.userdata.lastname}} <br>
+	email:  {{infoctrl.userdata.email}} <br>
+	phone:  {{infoctrl.userdata.phone}} <br>
+	favorite dish:  {{infoctrl.userdata.favdishinfo.name }} <br>
+	{{infoctrl.userdata.favdishinfo.description }} <br>
+	<img src="infoctrl.imagepath">
+</div>
+
+
+<div ng-if="!infoctrl.registered">
+	You haven't signed up yet!  Go and <a ui-sref="public.signup"> sign up </a> right away!!
+
+	<img src="images/menu/surpised.jpg" alt="surpised ring-tail lemur width='612' height='408' ">
+</div>
+

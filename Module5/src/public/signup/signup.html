@@ -36,19 +36,27 @@
 	<input type="text" 
 		name="favdish" 
 		placeholder="favorite menu item (letter code)"
-		ng-model="formctrl.user.favdish"
+		ng-model="formctrl.user.favdishcode"
 		required>
 		<span ng-if="signup.firstname.touched && signup.firstname.required"> &#x2713; </span>
+		<span ng-if="formctrl.invalidcode"> 
+			"Oops! Despite the vast cornucopia that is our menu, you have managed to pick a
+			code that doesn't exist.  As we get closer to our goal of complete domination
+			of the world of Chinese cuisine, we will have a large enough menu that every
+			conceivable two-digit code of alphanumeric characters will be represented.
+			Until that inevitable day, please check carefully and enter a valid code."
+		</span>
+
 
 	<button ng-disabled="signup.$invalid" ng-click = "formctrl.store(ctrl.user)">Submit</button>
 
 
 	<span ng-if = "(signup.firstname.$error.touched && signup.lastname.$error.touched && 
 				signup.email.$error.touched && signup.phone.$error.touched && 
-				signup.favdish.$error.touched ) &&  (
+				signup.favdishcode.$error.touched ) &&  (
 				signup.firstname.$error.required || signup.lastname.$error.required || 
 				signup.email.$error.required || signup.phone.$error.required || 
-				signup.favdish.$error.required )" >
+				signup.favdishcode.$error.required )" >
 					All fields are required.  Make sure to complete the entire form to register!
 				</span>
 
