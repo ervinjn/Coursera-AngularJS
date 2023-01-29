@@ -14,12 +14,16 @@
 		required>
 		<span ng-if="signup.firstname.touched && signup.firstname.$valid"> &#x2713; </span>
 
+		<br>
+
 	<input type="text" 
 		name="lastname" 
 		placeholder="last name" 
 		ng-model="formctrl.user.lastname" 
 		required>
 		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
+
+		<br>
 
 	<input type="text" 
 		name="email" 
@@ -28,6 +32,8 @@
 		required>
 		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
 
+		<br>
+
 	<input type="text" 
 		name="phone" 
 		placeholder="phone number"
@@ -35,9 +41,11 @@
 		required>
 		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
 
+		<br>
+
 	<input type="text" 
 		name="favdish" 
-		placeholder="favorite menu item (letter code)"
+		placeholder="favorite menu item (code)"
 		ng-model="formctrl.user.favdishcode"
 		required>
 		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
@@ -49,6 +57,7 @@
 			Until that inevitable day, please check carefully and enter a valid code."
 		</span>
 
+		<br>
 
 	<button ng-disabled="signup.$invalid" ng-click = "formctrl.store(ctrl.user)">Submit</button>
 
