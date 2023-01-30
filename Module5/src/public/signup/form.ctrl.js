@@ -38,8 +38,8 @@ ctrl.stored = false
         ctrl.invalidcode = true
     }
     else {
-      ctrl.stored = UserService.store(ctrl.user) 
-      return ctrl.stored}
+      ctrl.stored = UserService.store(ctrl.user) }
+      
    }
 
   }
