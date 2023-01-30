@@ -22,7 +22,7 @@ function FormController(UserService,MenuService) {
   ctrl.codes = [];
   var itemData = MenuService.getAllMenuItems();
   for(let prop in itemData) {
-      for(let i=0; i < prop.menu_items.length,i++) { codes.push(prop.menu_items[i].short_name) } }
+      for(let i=0; i < prop.menu_items.length; i++) { codes.push(prop.menu_items[i].short_name) } }
     console.log(ctrl.codes)
   }
 

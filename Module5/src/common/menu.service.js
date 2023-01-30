@@ -41,7 +41,7 @@ service.getAllMenuItems = function() {
 }
 
 
-}
+
 
 
 
