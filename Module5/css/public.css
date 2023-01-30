@@ -194,7 +194,8 @@ h3.menu-item-title {
 
 .inputbox {
   margin: 5px;
-  background-color: #179052;
+  background-color: white;
+  color: black;
 
 
 }
