@@ -21,9 +21,9 @@ function FormController(UserService,MenuService) {
   // Build an array of valid favdish codes
   ctrl.codes = [];
   var itemData = MenuService.getAllMenuItems();
-  let categories = Object.keys(itemData)
+  console.log(itemData)
+  let categories = Object.values(itemData)
   console.log(categories)
-  
 
 
   for(let prop in itemData) {
