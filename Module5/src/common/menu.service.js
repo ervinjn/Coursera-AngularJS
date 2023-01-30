@@ -34,7 +34,7 @@ function MenuService($http, ApiPath) {
 
 
 service.getAllMenuItems = function() {
-    return $http.get('data/menu.json').then( function(response) { return response}); 
+    return $http.get('data/menu.json').then( function(response) { return response.data }); 
 };
 
 
