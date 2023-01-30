@@ -20,8 +20,8 @@ function FormController(UserService,MenuService) {
 
   // Build an array of valid favdish codes
   ctrl.codes = [];
-  var itemData = MenuService.getAllMenuItems();
-  console.log(itemData.$$state)
+  ctrl.itemData = MenuService.getAllMenuItems();
+  console.log(ctrl.itemData)
   
 
 
