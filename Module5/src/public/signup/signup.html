@@ -50,16 +50,12 @@
 		required class='inputbox'>
 		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
 		<span ng-if="formctrl.invalidcode"> 
-			"Oops! Despite the vast cornucopia that is our menu, you have managed to pick a
-			code that doesn't exist.  As we get closer to our goal of complete domination
-			of the world of Chinese cuisine, we will have a large enough menu that every
-			conceivable two-digit code of alphanumeric characters will be represented.
-			Until that inevitable day, please check carefully and enter a valid code."
+			"Oops! That dish code doesn't seem to exist. Check it carefully, and try again.
 		</span>
 
 		<br>
 
-	<button ng-disabled="signup.$invalid" ng-click = "formctrl.store(formctrl.user)">Submit</button>
+	<button ng-disabled="signup.$invalid" ng-click = "formctrl.store()">Submit</button>
 	formctrl.store: {{formctrl.stored}} <br>
 	formctrl.user: {{formctrl.user}}
 

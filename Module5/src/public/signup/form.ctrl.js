@@ -20,20 +20,21 @@ function FormController(UserService,MenuService) {
 
   // Build an array of valid favdish codes
   ctrl.codes = [];
-  ctrl.categories = MenuService.getCategories();
-  for(let i=0; ctrl.categories.length; i++) {
-    ctrl.codes.push(ctrl.categories[i].short_name)
+  var itemData = MenuService.getAllMenuItems();
+  for(let prop in itemData) {
+      for(let i=0; i < prop.menu_items.length,i++) { codes.push(prop.menu_items[i].short_name) } }
+    console.log(ctrl.codes)
   }
 
  ctrl.stored = false
-  ctrl.store = function(data) { 
+ctrl.store = function() { 
 
     // first task, before storage, is to check whether they have entered a valid favdish code
     if (ctrl.codes.indexOf(ctrl.user.favdishcode) == -1){
         ctrl.invalidcode = true
     }
     else {
-      ctrl.stored = UserService.store(data) 
+      ctrl.stored = UserService.store(ctrl.user) 
       return ctrl.stored}
    }
 

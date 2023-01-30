@@ -30,11 +30,16 @@ function MenuService($http, ApiPath) {
      return $http.get('data/' + category + '.json').then(function (response) {
       return response.data;
    });
+};
 
 
-  
+service.getAllMenuItems = function() {
+    return $http.get('data/menu.json').then( function(response) { return response.data}); 
+};
 
-  };
+
+}
+
 
 }
 
