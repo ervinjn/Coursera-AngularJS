@@ -19,9 +19,7 @@ function FormController(UserService,MenuService) {
   ctrl.invalidcode = false
 
   // Build an array of valid favdish codes
-  ctrl.codes = [];
-  ctrl.itemData = MenuService.data;
-  console.log(ctrl.itemData)
+  
   
 
 
