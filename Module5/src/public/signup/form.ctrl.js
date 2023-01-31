@@ -22,7 +22,7 @@ function FormController($http,UserService,MenuService) {
   ctrl.items = $http.get('data/menu.json').then( function(response) { 
         return response.data;
         });
-  
+  console.log(ctrl.items)
   console.log(ctrl.items.$$state)
   console.log(ctrl.items.$$state.status)
   console.log(Object.keys(ctrl.items.$$state))
