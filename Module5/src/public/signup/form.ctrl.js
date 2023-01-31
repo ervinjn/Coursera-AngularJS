@@ -30,6 +30,7 @@ function FormController($scope,$http,UserService,MenuService) {
 
 
 console.log(ctrl)
+console.log(ctrl.items)
 
   //for(let prop in itemData) {
    //   for(let i=0; i < prop.menu_items.length; i++) { codes.push(prop.menu_items[i].short_name) } }
