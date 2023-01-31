@@ -23,7 +23,7 @@ function FormController($http,UserService,MenuService) {
         return response.data;
         });
   
-  console.log(ctrl.items.$$state.value)
+  console.log(ctrl.items.$$state.A)
 
   //for(let prop in itemData) {
    //   for(let i=0; i < prop.menu_items.length; i++) { codes.push(prop.menu_items[i].short_name) } }
