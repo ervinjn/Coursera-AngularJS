@@ -22,6 +22,8 @@ function FormController(UserService,allItems) {
   // Build an array of valid favdish codes
  ctrl.menuitems = allItems
  console.log(ctrl.menuitems)
+ ctrl.categories = Object.keys(ctrl.menuitems)
+ console.log(ctrl.categories)
   
 
 
