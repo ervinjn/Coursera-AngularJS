@@ -29,8 +29,7 @@ function MenuService($http, ApiPath) {
   // });
 
      return $http.get('data/' + category + '.json').then(function (response) {
-        service.data = response.data
-      return service.data;
+        return = response.data
    });
 };
 
