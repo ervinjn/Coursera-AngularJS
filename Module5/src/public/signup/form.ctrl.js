@@ -4,8 +4,8 @@
 angular.module('public')
 .controller('FormController', FormController);
 
-FormController.$inject = ['UserService','MenuItems'];
-function FormController(UserService,MenuItems) {
+FormController.$inject = ['UserService','allItems'];
+function FormController(UserService,allItems) {
   var ctrl = this;
   ctrl.user = {
     firstname : "",
@@ -20,7 +20,7 @@ function FormController(UserService,MenuItems) {
   ctrl.invalidcode = false
 
   // Build an array of valid favdish codes
- ctrl.menuitems = MenuItems
+ ctrl.menuitems = allItems
  console.log(ctrl.menuitems)
   
 

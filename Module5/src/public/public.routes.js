@@ -47,14 +47,10 @@ function routeConfig ($stateProvider) {
       controller: 'FormController',
       controllerAs: 'formctrl',
       resolve: {
-        menuItems: ['MenuService', function (MenuService) {
+        allItems: ['MenuService', function (MenuService) {
           return MenuService.getAllMenuItems();
         }]
       }
-
-
-
-
     })
 
     .state('public.myinfo', {
