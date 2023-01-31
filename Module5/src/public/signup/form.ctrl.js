@@ -23,6 +23,7 @@ function FormController($http,UserService,MenuService) {
         return response.data;
         });
   
+  console.log(ctrl.items.$$state)
   console.log(ctrl.items.$$state.status)
   console.log(Object.keys(ctrl.items.$$state))
 
