@@ -19,9 +19,11 @@ function FormController(UserService,MenuService) {
   ctrl.invalidcode = false
 
   // Build an array of valid favdish codes
+  ctrl.items = $http.get('data/menu.json').then( function(response) { 
+        return response.data;
+        });
   
-  
-  console.log(ctrl.menuItems)
+  console.log(ctrl.items)
 
   //for(let prop in itemData) {
    //   for(let i=0; i < prop.menu_items.length; i++) { codes.push(prop.menu_items[i].short_name) } }
