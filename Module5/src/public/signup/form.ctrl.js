@@ -26,11 +26,13 @@ function FormController($scope,$http,UserService,MenuService) {
   $http.get('data/menu.json').then( function(response) { 
         console.log(response.data)
         ctrl.items = response.data;
+        return ctrl.items
         });
 
 
 console.log(ctrl)
 console.log(ctrl.user)
+console.log(ctrl.items)
 
   //for(let prop in itemData) {
    //   for(let i=0; i < prop.menu_items.length; i++) { codes.push(prop.menu_items[i].short_name) } }
