@@ -4,7 +4,6 @@
 <h2> Sign Up </h2>
 
 <h3> To sign up, complete the form and submit. </h3>
-{{formctrl.user}}
 
 <form name="signup" novalidate id="userform">
 	<input type="text" 
@@ -56,10 +55,7 @@
 		<br>
 
 	<button ng-disabled="signup.$invalid" ng-click = "formctrl.store()">Submit</button>
-	formctrl.store: {{formctrl.stored}} <br>
-	formctrl.user: {{formctrl.user}} <br>
-	test <br>
-	{{formctrl.menuItems}}
+	
 	<span ng-if = "(signup.firstname.$error.touched && signup.lastname.$error.touched && 
 				signup.email.$error.touched && signup.phone.$error.touched && 
 				signup.favdishcode.$error.touched ) &&  (
@@ -76,4 +72,4 @@
 
 </form>
 
-{{ctrl.items}}
+
