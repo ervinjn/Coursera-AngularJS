@@ -21,7 +21,7 @@ function FormController($scope,$http,UserService,MenuService) {
 
   // Build an array of valid favdish codes
  ctrl.items = (function() {
- return $http.get('data/menu.json').then( function(response) { 
+  $http.get('data/menu.json').then( function(response) { 
         console.log(response.data)
         return response.data;
         });
