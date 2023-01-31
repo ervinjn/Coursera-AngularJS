@@ -5,7 +5,7 @@ angular.module('public')
 .controller('FormController', FormController);
 
 FormController.$inject = ['$http','UserService','MenuService'];
-function FormController(UserService,MenuService) {
+function FormController($http,UserService,MenuService) {
   var ctrl = this;
   ctrl.user = {
     firstname : "",
