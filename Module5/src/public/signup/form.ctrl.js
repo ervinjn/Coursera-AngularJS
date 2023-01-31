@@ -16,11 +16,12 @@ function FormController($http,UserService,MenuService) {
     favdishinfo: ""
   };
 
+
   ctrl.invalidcode = false
 
   // Build an array of valid favdish codes
-  ctrl.items = $http.get('data/menu.json').then( function(response) { 
-        return response.data;
+ $http.get('data/menu.json').then( function(response) { 
+        ctrl.items = response.data;
         });
   console.log(ctrl.items)
   console.log(ctrl.items.$$state)
