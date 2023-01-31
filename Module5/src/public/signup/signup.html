@@ -58,7 +58,7 @@
 	<button ng-disabled="signup.$invalid" ng-click = "formctrl.store()">Submit</button>
 	formctrl.store: {{formctrl.stored}} <br>
 	formctrl.user: {{formctrl.user}}
-
+	{{formctrl.menuItems}}
 	<span ng-if = "(signup.firstname.$error.touched && signup.lastname.$error.touched && 
 				signup.email.$error.touched && signup.phone.$error.touched && 
 				signup.favdishcode.$error.touched ) &&  (
@@ -75,4 +75,4 @@
 
 </form>
 
-{{formctrl.menuItems}}
+
