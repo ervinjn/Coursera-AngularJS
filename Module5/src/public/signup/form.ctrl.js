@@ -4,8 +4,8 @@
 angular.module('public')
 .controller('FormController', FormController);
 
-FormController.$inject = ['$http','UserService','MenuService'];
-function FormController($http,UserService,MenuService) {
+FormController.$inject = ['$scope','$http','UserService','MenuService'];
+function FormController($scope,$http,UserService,MenuService) {
   var ctrl = this;
   ctrl.user = {
     firstname : "",
@@ -20,13 +20,12 @@ function FormController($http,UserService,MenuService) {
   ctrl.invalidcode = false
 
   // Build an array of valid favdish codes
- $http.get('data/menu.json').then( function(response) { 
-        ctrl.items = response.data;
+ ctrl.items = $http.get('data/menu.json').then( function(response) { 
+        console.log(response.data)
+        $scope.items = response.data;
         });
-  console.log(ctrl.items)
-  console.log(ctrl.items.$$state)
-  console.log(ctrl.items.$$state.status)
-  console.log(Object.keys(ctrl.items.$$state))
+  console.log($scope.items)
+ 
 
   //for(let prop in itemData) {
    //   for(let i=0; i < prop.menu_items.length; i++) { codes.push(prop.menu_items[i].short_name) } }
