@@ -20,14 +20,16 @@ function FormController($scope,$http,UserService,MenuService) {
   ctrl.invalidcode = false
 
   // Build an array of valid favdish codes
- ctrl.items = (function() {
+ 
+  console.log(ctrl)
+
   $http.get('data/menu.json').then( function(response) { 
         console.log(response.data)
-        return response.data;
+        ctrl.items = response.data;
         });
-})();
 
-console.log(ctrl.items)
+
+console.log(ctrl)
 
   //for(let prop in itemData) {
    //   for(let i=0; i < prop.menu_items.length; i++) { codes.push(prop.menu_items[i].short_name) } }
