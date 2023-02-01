@@ -12,35 +12,25 @@ function FormController(UserService,allItems) {
     lastname : "",
     email: "",
     phone: "",
-    favdishcode: "",
-    favdishinfo: ""
+    favdishcode: ""
   };
 
-
-  ctrl.invalidcode = false
-
-  // Build an array of valid favdish codes
- ctrl.menuitems = allItems
- console.log(ctrl.menuitems)
- ctrl.categories = Object.keys(ctrl.menuitems)
- console.log(ctrl.categories)
   
 
+// Build an array of valid favdish codes
+ ctrl.menuitems = allItems
+ console.log(ctrl.menuitems)
+ ctrl.codes = UserService.codes(ctrl.menuitems);   // controller passes the menu data to UserService so that is can build an array of item codes 
+                                                  //to check against the user's provided item code
+ console.log(ctrl.codes)
 
-  //for(let prop in itemData) {
-   //   for(let i=0; i < prop.menu_items.length; i++) { codes.push(prop.menu_items[i].short_name) } }
-  //  console.log(ctrl.codes)
-
-
+ctrl.invalidcode = false
 ctrl.stored = false
-  ctrl.store = function() { 
+ctrl.store = function() { 
 
     // first task, before storage, is to check whether they have entered a valid favdish code
-    if (ctrl.codes.indexOf(ctrl.user.favdishcode) == -1){
-        ctrl.invalidcode = true
-    }
-    else {
-      ctrl.stored = UserService.store(ctrl.user) }
+    if (ctrl.codes.indexOf(ctrl.user.favdishcode) == -1){ ctrl.invalidcode = true }
+    else { ctrl.stored = UserService.store(ctrl.user) }
       
    }
 
