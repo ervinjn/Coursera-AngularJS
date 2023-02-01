@@ -33,7 +33,7 @@ function UserService(MenuService) {
     // to retrieve some data about the favorite menu item and make it available to the user.
 
     var favdishcode = userdata.favdishcode
-    var favdisharray = userdata.favdishcode.toCharArray()    // favdishcode converted to a character array
+    var favdisharray = Array.from(userdata.favdishcode)     // favdishcode converted to a character array
     var i = 0
     while( !(codearray[i].isDigit) ) {  i = i+1 }
     var favcategory = favdisharray.slice(0,i-1)               // extracting the letter portion of the code and storing it in a variable
