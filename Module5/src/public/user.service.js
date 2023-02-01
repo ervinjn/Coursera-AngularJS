@@ -34,6 +34,7 @@ function UserService(MenuService) {
 
     var favdishcode = userdata.favdishcode
     var favdisharray = Array.from(userdata.favdishcode)     // favdishcode converted to a character array
+    console.log(favdisharray)
     var i = 0
     while( !(favdisharray[i].isDigit) ) {  i = i+1 }
     var favcategory = favdisharray.slice(0,i-1)               // extracting the letter portion of the code and storing it in a variable
