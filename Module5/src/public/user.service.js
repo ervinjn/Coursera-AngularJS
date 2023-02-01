@@ -22,7 +22,7 @@ function UserService(MenuService) {
     var categories = Object.keys(menu)
     categories.forEach((category) => {
       var items = menu[category].menu_items
-      for(let j=0;j< items.length;j++ ) { codearray.push(items[j].short_name)} })
+      for(let j=0;j< items.length;j++ ) { service.codearray.push(items[j].short_name)} })
     return service.codearray
       }
 
