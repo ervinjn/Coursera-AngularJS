@@ -39,7 +39,7 @@ function UserService(MenuService) {
     while( isNaN(favdisharray[i]) ) {  i = i+1 }
     var favcategory = favdisharray.slice(0,i)
     var favcat = ""
-    for(let i=0;i < favcategory.length,i++){
+    for(let i=0;i < favcategory.length;i++){
       favcat = favcat + favcategory[i]
     } // extracting the letter portion of the code and storing it in a variable
     var item_array = service.menudata[favcat].menu_items  // array of menu items for the favorite cartegory
