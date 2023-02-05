@@ -58,6 +58,17 @@ function UserService(MenuService) {
   service.retrieve = function() { return service.userdata }
   // The retrieve returns the stored data object to the caller. 
 
+  service.reset = function() {
+    service.userdata = {
+    firstname : "",
+    lastname : "",
+    email: "",
+    phone: "",
+    favdishcode: ""
+  };
+  return service.userdata
+  }
+
 }
 
 
