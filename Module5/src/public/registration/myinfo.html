@@ -6,8 +6,12 @@
 	phone:  {{infoctrl.userdata.phone}} <br>
 	favorite dish:  {{infoctrl.userdata.favdishinfo.name }} <br>
 	{{infoctrl.userdata.favdishinfo.description }} <br>
-	<img ng-src="{{infoctrl.imagepath}}">
+	<img ng-src="{{infoctrl.imagepath}}">  
+	<span> To clear your information, click the clear button.
+		<button ng-click="infoctrl.reset()"> clear  </button>
+	</span>
 </div>
+
 
 
 <div ng-if="!infoctrl.registered">

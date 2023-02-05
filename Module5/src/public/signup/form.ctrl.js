@@ -15,15 +15,10 @@ function FormController(UserService,allItems) {
     favdishcode: ""
   };
 
-  
-
 // Build an array of valid favdish codes
  ctrl.menuitems = allItems
- console.log(ctrl.menuitems)
  ctrl.codes = UserService.codes(ctrl.menuitems);   // controller passes the menu data to UserService so that is can build an array of item codes 
                                                   //to check against the user's provided item code
- console.log(ctrl.codes)
-
 ctrl.invalidcode = false
 ctrl.stored = false
 ctrl.store = function() { 
