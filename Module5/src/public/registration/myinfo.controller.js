@@ -15,6 +15,7 @@ function MyInfoController(UserService) {
     ctrl.userdata = UserService.retrieve() 
     ctrl.imagepath = 'images/menu/' + ctrl.userdata.favdishinfo.short_name + '.jpg'
     console.log(ctrl.userdata.favdishinfo.short_name)
+    console.log('images/menu/' + ctrl.userdata.favdishinfo.short_name + '.jpg')
   }
 
 
