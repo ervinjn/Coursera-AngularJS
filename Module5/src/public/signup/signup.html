@@ -38,7 +38,8 @@
 		name="phone" 
 		placeholder="phone number"
 		ng-model="formctrl.user.phone"
-		required class='inputbox'>
+		required class='inputbox'
+		pattern="^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$">
 		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
 
 		<br>
