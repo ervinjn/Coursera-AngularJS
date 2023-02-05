@@ -19,7 +19,7 @@ function MyInfoController(UserService) {
 
   ctrl.reset = function() {
     ctrl.registered = false
-    ctrl.userdata = UserService.reset()
+    UserService.reset()
   }
 
 
