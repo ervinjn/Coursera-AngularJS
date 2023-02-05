@@ -187,6 +187,11 @@ h3.menu-item-title {
 
 /***************** Form Validation Styling  ******************/
 
+.button {
+  color: black;
+  background-color: #901778;
+
+}
 
 #userform{
   color: white;
