@@ -33,20 +33,19 @@ function UserService(MenuService) {
     // to retrieve some data about the favorite menu item and make it available to the user.
 
     var favdishcode = userdata.favdishcode
-    var favdisharray = Array.from(userdata.favdishcode)     // favdishcode converted to a character array
-    console.log(favdisharray)
+    var favdisharray = Array.from(userdata.favdishcode)     // favdishcode converted to a 
+                                                            //character array
     var i = 0
-     console.log(favdisharray[i])
-     console.log(isNaN(favdisharray[i]))
     while( isNaN(favdisharray[i]) ) {  i = i+1 }
-    var favcategory = favdisharray.slice(0,i).toString();               // extracting the letter portion of the code and storing it in a variable
-    console.log(favcategory)
-    var item_array = service.menudata[favcategory].menu_items      // array of menu items for the favorite cartegory
+    var favcategory = favdisharray.slice(0,i).toString();
+    var favcat = ""
+    for(let i=0;i < favcategory.length,i++){
+      favcat = favcat + favcategory[i]
+    } // extracting the letter portion of the code and storing it in a variable
+    var item_array = service.menudata[favcat].menu_items  // array of menu items for the favorite cartegory
     i = 0
     while(!(item_array[i].short_name == favdishcode)){ i = i+1 }
     userdata.favdishinfo = item_array[i]
-  console.log(userdata.favdishinfo)
-
     service.userdata = userdata
     service.registered = true
     return service.registered
