@@ -4,7 +4,7 @@
 <h2> Sign Up </h2>
 
 <h3> To sign up, complete the form and submit. </h3>
-<h4> [For "favorite menu item", enter the code (e.g. 'CU23', etc.)Codes can be found on the menu pages.] </h4>
+<h4> [For "favorite menu item", enter the code (e.g. 'CU23', etc.) Codes can be found on the menu pages.] </h4>
 
 <form name="signup" novalidate id="userform">
 	<input type="text" 
@@ -32,9 +32,10 @@
 		placeholder="email address"
 		required pattern="\w+@\w+\.[a-z]+"
 		ng-model="formctrl.user.email" class='inputbox'>
-		<span ng-if="signup.email.$error.required && signup.email.$error.pattern && signup.email.$touched"> 
-		email is required.  Make sure to use the correct format. </span>
-
+		<span ng-if="signup.email.$error.required && signup.email.$touched"> 
+		email is required. </span>
+		<span ng-if="signup.email.$error.pattern && signup.email.$touched"> 
+		Make sure to use the correct format. </span>
 		<br>
 
 	<input type="text" 
@@ -43,9 +44,12 @@
 		ng-model="formctrl.user.phone"
 		required class='inputbox'
 		pattern="^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$">
-	<span ng-if=" signup.phone.$error.required && signup.phone.$error.pattern && signup.phone.$touched"> 
-		phone is required.  Make sure to use a conventional format. </span>
-
+	<span ng-if="signup.phone.$error.required && signup.phone.$touched"> 
+		phone is required. </span>
+	<span ng-if="signup.phone.$error.pattern && signup.phone.$touched"> 
+		Make sure to use a conventional North American format for phone numbers. 
+		(e.g. 555-555-5555, (555)555-5555, etc.)
+	</span>
 		<br>
 
 	<input type="text" 
