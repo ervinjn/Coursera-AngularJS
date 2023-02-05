@@ -4,6 +4,8 @@
 <h2> Sign Up </h2>
 
 <h3> To sign up, complete the form and submit. </h3>
+<h4> (for "favorite menu item", enter the code (e.g. 'CU23', etc.)
+	<br> Codes can be found on the menu pages.) </h4>
 
 <form name="signup" novalidate id="userform">
 	<input type="text" 
@@ -24,11 +26,12 @@
 
 		<br>
 
-	<input type="text" 
+	<input type="email" 
 		name="email" 
 		placeholder="email address"
 		ng-model="formctrl.user.email" 
-		required class='inputbox'>
+		required class='inputbox'
+		pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$">
 		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
 
 		<br>
@@ -44,7 +47,7 @@
 
 	<input type="text" 
 		name="favdish" 
-		placeholder="favorite menu item (code)"
+		placeholder="favorite menu item"
 		ng-model="formctrl.user.favdishcode"
 		required class='inputbox'>
 		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
