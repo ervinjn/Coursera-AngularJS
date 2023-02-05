@@ -28,9 +28,8 @@
 	<input type="email" 
 		name="email" 
 		placeholder="email address"
-		ng-model="formctrl.user.email" 
-		required class='inputbox'
-		pattern="^[a-z0-9._%+-]+@[a-z0-9.-]">
+		required pattern="\w+@\w+\.[a-z]+"
+		ng-model="formctrl.user.email" class='inputbox'>
 		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
 
 		<br>
