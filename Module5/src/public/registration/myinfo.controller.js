@@ -17,7 +17,7 @@ function MyInfoController(UserService) {
   }
 
 
-  function ctrl.reset() {
+  ctrl.reset = function() {
     ctrl.registered = false
   }
 
