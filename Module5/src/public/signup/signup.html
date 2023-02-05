@@ -12,7 +12,8 @@
 		placeholder="first name" 
 		ng-model="formctrl.user.firstname"
 		required class='inputbox'>
-		<span ng-if="signup.firstname.touched && signup.firstname.$valid"> &#x2713; </span>
+		<span ng-if="signup.firstname.$error.required && signup.firstname.$touched"> 
+		first name is required. </span>
 
 		<br>
 
@@ -21,7 +22,8 @@
 		placeholder="last name" 
 		ng-model="formctrl.user.lastname" 
 		required class='inputbox'>
-		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
+		<span ng-if="signup.lastname.$error.required && signup.lastname.$touched"> 
+		last name is required. </span>
 
 		<br>
 
@@ -30,7 +32,8 @@
 		placeholder="email address"
 		required pattern="\w+@\w+\.[a-z]+"
 		ng-model="formctrl.user.email" class='inputbox'>
-		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
+		<span ng-if="signup.email.$error.required && signup.email.$error.pattern && signup.email.$touched"> 
+		email is required.  Make sure to use the correct format. </span>
 
 		<br>
 
@@ -40,7 +43,8 @@
 		ng-model="formctrl.user.phone"
 		required class='inputbox'
 		pattern="^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$">
-		<span ng-if="signup.firstname.touched && signup.firstname.valid"> &#x2713; </span>
+	<span ng-if=" signup.phone.$error.required && signup.phone.$error.pattern && signup.phone.$touched"> 
+		phone is required.  Make sure to use a conventional format. </span>
 
 		<br>
 
