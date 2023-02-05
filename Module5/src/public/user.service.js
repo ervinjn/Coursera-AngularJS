@@ -46,6 +46,7 @@ function UserService(MenuService) {
     i = 0
     while(!(item_array[i].short_name == favdishcode)){ i = i+1 }
     userdata.favdishinfo = item_array[i]
+  console.log(userdata.favdishinfo)
 
     service.userdata = userdata
     service.registered = true
